@@ -74,8 +74,8 @@ export class AppComponent implements OnInit,AfterViewInit {
     {
       let dropIndex=this.numbers.findIndex((x:any)=>x.id==dropArea.id);
       let dragIndex=this.numbers.findIndex((x:any)=>x.val==data);
-      let arrayWithoutElem=this.numbers.splice(dragIndex,1);
-      this.numbers.splice(dropIndex,0,arrayWithoutElem[0]);
+      let arrayWithDragElem=this.numbers.splice(dragIndex,1);
+      this.numbers.splice(dropIndex,0,arrayWithDragElem[0]);
     
     }
      
